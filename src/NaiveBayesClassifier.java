@@ -29,25 +29,25 @@ public class NaiveBayesClassifier {
 	
 	public static ArrayList<ArrayList<String>> parseInput(String train, String test) {
 		try {
-		File trainFile = new File(train);
-		BufferedReader br = new BufferedReader(new FileReader(trainFile));
-		ArrayList<String> trainingData = new ArrayList<String>();
-		String line;
-		while ((line = br.readLine()) != null) {
-			trainingData.add(line);
-		}
-		
-		File testFile = new File(test);
-		BufferedReader br2 = new BufferedReader(new FileReader(testFile));
-		ArrayList<String> testingData = new ArrayList<String>();
-		while ((line = br2.readLine()) != null) {
-			testingData.add(line);
-		}
-		ArrayList<ArrayList<String>> input = new ArrayList<ArrayList<String>>();
-		input.add(trainingData);
-		input.add(testingData);
-		return input;
-		}
+			File trainFile = new File(train);
+			BufferedReader br = new BufferedReader(new FileReader(trainFile));
+			ArrayList<String> trainingData = new ArrayList<String>();
+			String line;
+			while ((line = br.readLine()) != null) {
+				trainingData.add(line);
+			}
+			
+			File testFile = new File(test);
+			BufferedReader br2 = new BufferedReader(new FileReader(testFile));
+			ArrayList<String> testingData = new ArrayList<String>();
+			while ((line = br2.readLine()) != null) {
+				testingData.add(line);
+			}
+			ArrayList<ArrayList<String>> input = new ArrayList<ArrayList<String>>();
+			input.add(trainingData);
+			input.add(testingData);
+			return input;
+			}
 		catch (IOException ex) {
 			System.exit(0);
 		}
